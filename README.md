@@ -11,7 +11,8 @@
                                         by:i11us0ry
 ---------------------------------------------------------------------------------------------
 
-goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。功能包含：ip探活、port扫描、web指纹扫描、title扫描、fofa获取、ms17010、mssql、mysql、postgres、redis、ssh、smb、rdp、telnet等爆破以及如netbios探测等功能。
+goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。
+功能包含：ip探活、port扫描、web指纹扫描、title扫描、fofa获取、ms17010、mssql、mysql、postgres、redis、ssh、smb、rdp、telnet等爆破以及如netbios探测等功能。
 
 ```
 
