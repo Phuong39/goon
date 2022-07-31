@@ -18,20 +18,19 @@ goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。
 ```
 
 ## 使用帮助
-#### 编译问题：
-只提供amd64样品，其他可按需自行编译
 
-关于日志打印如下错误信息：`wsarecv: An existing connection was forcibly closed by the remote host.`
+#### 问题强调：
+- 只提供amd64样品，其他可按需自行编译
 
-解决方案：注释掉如下代码重新编译
+- 关于日志打印如下错误信息：
+- `wsarecv: An existing connection was forcibly closed by the remote host.`
+- 解决方案：注释掉如下代码重新编译
+- `github.com/go-sql-driver/mysql/packets.go 中注释 errLog.Print(err) `
 
-`github.com/go-sql-driver/mysql/packets.go 中注释 errLog.Print(err) `
-
-关于日志打印如下错误信息：`Unsolicited response received on idle HTTP channel starting with`
-
-解决方案：注释掉如下代码重新编译
-
-`net/http/transport.go 中 log.Printf("Unsolicited response received on idle HTTP channel starting with %q; err=%v", buf, peekErr)`
+- 关于日志打印如下错误信息：
+- `Unsolicited response received on idle HTTP channel starting with`
+- 解决方案：注释掉如下代码重新编译
+- `net/http/transport.go 中 log.Printf("Unsolicited response received on idle HTTP channel starting with %q; err=%v", buf, peekErr)`
 
 #### 参数说明：
 可选mode如下:
