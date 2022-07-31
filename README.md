@@ -35,9 +35,12 @@ goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。
 #### 其他说明
 - 问题：linux下报错open too many files
 - 解决：参考https://blog.csdn.net/whatday/article/details/104166669
-- 
+ 
 - 问题：goon执行直接报错，加上-np不报错
 - 解决：执行goon的权限太低
+
+- 问题：乱七八糟的
+- 解决：提issues，我会尽快验证修复
 
 #### 参数说明：
 可选mode如下:
@@ -110,7 +113,7 @@ goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。
 
 #### 默认情况
 
-成果为一个golang可执行文件和一个yaml配置文件，若无配置文件可以先运行goon生成默认配置文件
+成果为一个go可执行文件和一个yaml配置文件，若无配置文件可以先运行goon生成默认配置文件
 
 ![1](iamge/1.png)
 
