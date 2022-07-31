@@ -19,18 +19,25 @@ goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。
 
 ## 使用帮助
 
-#### 问题强调：
-- 只提供amd64样品，其他可按需自行编译
+#### 编译说明：
+- 只提供win、linux、mac amd64编译成品，若不能满足需求可自行编译。关于自行编译可能遇到问题和解决方案如下：
 
-- 关于日志打印如下错误信息：
+- 执行mysql爆破时日志打印如下信息：
 `wsarecv: An existing connection was forcibly closed by the remote host.`
-- 解决方案：注释掉如下代码重新编译
+- 解决方案：注释掉如下代码重新编译（依赖问题）
 `github.com/go-sql-driver/mysql/packets.go 中注释 errLog.Print(err) `
 
-- 关于日志打印如下错误信息：
+- 执行http请求时日志打印如下信息：
 `Unsolicited response received on idle HTTP channel starting with`
-- 解决方案：注释掉如下代码重新编译
+- 解决方案：注释掉如下代码重新编译（依赖问题）
 `net/http/transport.go 中 log.Printf("Unsolicited response received on idle HTTP channel starting with %q; err=%v", buf, peekErr)`
+
+#### 其他说明
+- 问题：linux下报错open too many files
+- 解决：参考https://blog.csdn.net/whatday/article/details/104166669
+- 
+- 问题：goon执行直接报错，加上-np不报错
+- 解决：执行goon的权限太低
 
 #### 参数说明：
 可选mode如下:
@@ -102,6 +109,7 @@ goon,集合了fscan和kscan等优秀工具功能的扫描爆破工具。
 ## 示例截图
 
 #### 默认情况
+
 成果为一个golang可执行文件和一个yaml配置文件，若无配置文件可以先运行goon生成默认配置文件
 
 ![1](iamge/1.png)
